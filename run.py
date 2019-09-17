@@ -15,7 +15,8 @@ class Questao:
 
 
 q1=Questao('regra de tres','b','facil','enem2018-136')
-lista=[q1]
+q2=Questao('regra de tres1sdfs','bgsdfgs','facilgsdfg','enem2018-136sdfgsdfg')
+lista=[q1,q2]
 
 @app.route('/')
 def index():
@@ -35,8 +36,20 @@ def criar():
 	imagem=request.form['imagem']
 	questao=Questao(assunto,gabarito,dificuldade,imagem)
 	lista.append(questao)
-	return render_template('questao.html', titulo='Questão Adicionada', questao=questao)
+	return render_template('questao.html', titulo='Questao Adicionada', questao=questao)
 	#return redirect('/')
+
+@app.route('/login')
+def login():
+	return render_template('login.html')
+
+@app.route('/autenticar')
+def autenticar():
+	if 'mestra' == request.form['senha']:
+		return redirect('/', methods=['POST',])
+	else:
+		return redirect('/login')
+
 
 if __name__ == '__main__':
 	app.run(debug=True)
