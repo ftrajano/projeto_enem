@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jogoteca</title>
-</head>
-<body>
-    <div class="container">
+{% extends "template.html"%}
+{%block conteudo %}
+      <div class="container">
       <div class="page-header">
-          <h1>{{ titulo }}</h1>
-          <p>{{questao.imagem}}</p>
+          <h1>Testando</h1>
+          <p>{{questao.assunto}}</p>
+          <p>{{questao.gabarito}}</p>
       </div>
-      <img src="{{url_for('static', filename=questao.imagem)}}" alt="">
+      <img src="{{url_for('static/banco_questoes/enem2018/Fotos', filename=questao.imagem)}}">
     </div>
-</body>
-</html>
+{%endblock%}
+
+#ftp://ftrajano@ftrajano.web7697.kinghost.net/apps_wsgi/enem/static/amarela2018-137.png

@@ -1,9 +1,10 @@
 #!/bin/python
 # -*- coding: utf-8 -*-
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
+
 
 class Questao:
 	def __init__(self, assunto,gabarito,dificuldade,imagem):
@@ -17,7 +18,6 @@ q1=Questao('regra de tres','b','facil','enem2018-136')
 lista=[q1]
 
 @app.route('/')
-
 def index():
 	return render_template('lista.html', titulo='Questoes', questoes=lista)
 
@@ -28,14 +28,15 @@ def novo():
 
 
 @app.route('/criar', methods=['POST',])
-def create():
+def criar():
 	assunto=request.form['assunto']
 	gabarito=request.form['gabarito']
 	dificuldade=request.form['dificuldade']
 	imagem=request.form['imagem']
 	questao=Questao(assunto,gabarito,dificuldade,imagem)
 	lista.append(questao)
-	return render_template('questao.html', titulo='Teu cu', questao=questao)
+	return render_template('questao.html', titulo='Questão Adicionada', questao=questao)
+	#return redirect('/')
 
 if __name__ == '__main__':
-        app.run()
+	app.run(debug=True)
