@@ -20,6 +20,10 @@ lista=[q1,q2]
 
 @app.route('/')
 def index():
+	return render_template('index', titulo='Questoes', questoes=lista)
+
+@app.route('/lista')
+def index():
 	return render_template('lista.html', titulo='Questoes', questoes=lista)
 
 
