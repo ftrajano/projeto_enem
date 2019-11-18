@@ -4,4 +4,11 @@
     padding: 14px 15px;
     text-transform:uppercase;
 }
-.fa {color:#5a5a5a;}
+.fa {
+	color:#5a5a5a;
+}
+
+.jumbotron{
+	background-color: black;
+	color: white;
+}
