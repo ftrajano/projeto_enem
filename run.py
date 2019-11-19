@@ -26,6 +26,10 @@ def index():
 def lista():
 	return render_template('lista.html', titulo='Questoes', questoes=lista)
 
+@app.route('/escala')
+def escala():
+	return render_template('julietto.html')
+
 
 @app.route('/novo')
 def novo():

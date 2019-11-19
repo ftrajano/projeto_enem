@@ -1,0 +1,79 @@
+{% extends "template.html"%}
+{%block conteudo%}
+
+<div class="container">
+      
+    <h1>Escala Semanal</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Horário</th>
+           <th scope="col">Segunda</th>
+          <th scope="col">Terça</th>
+          <th scope="col">Quarta</th>
+          <th scope="col">Quinta</th>
+          <th scope="col">Sexta</th>
+          <th scope="col">Sábado</th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">08:00 - 16:20</th>
+          <td>Silvania<br>
+          Henrique</td>
+          <td>
+            Marina<br>
+            Carlos
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">11:40-20:00</th>
+           <td>Marina cx<br>
+            Carlos</td>
+          <td>
+              Rafaela cs<br>
+              Roberto <br>
+              Henrique*
+            </td>
+        </tr>
+        <tr>
+          <th scope="row">12:40-21:00</th>
+          <td>Yasmin JF<br>
+          Rafael</td>
+        </tr>
+       <tr>
+          <th scope="row">14:10-22:30</th>
+          <td>Brenno<br>
+            Natalia
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">16:10 - 00:30</th>
+         
+        </tr>
+        <tr>
+          <th scope="row">Folgas</th>
+          <td>
+            Rafaela<br>
+            Roberto
+          </td>
+        </tr>
+      </tbody>
+    </table>
+      
+    </div>
+
+    <div class="container">
+      
+      <button id="displayFuncionariosButton">Exibir funcionarios </button>
+      <button>Esconder funcionarios</button>
+
+      <button onclick="handlers.displayFuncionarios()">Exibir funcionarios </button>
+      <button onclick="">Esconder funcionarios</button>
+
+    </div>
+
+  {%endblock%}
