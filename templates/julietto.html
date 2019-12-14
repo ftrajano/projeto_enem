@@ -9,51 +9,124 @@
       <thead>
         <tr>
           <th scope="col">Horário</th>
-           <th scope="col">Segunda</th>
+          <th scope="col">Segunda</th>
           <th scope="col">Terça</th>
           <th scope="col">Quarta</th>
           <th scope="col">Quinta</th>
           <th scope="col">Sexta</th>
           <th scope="col">Sábado</th>
-
         </tr>
       </thead>
 
       <tbody>
         <tr>
-          <th scope="row">08:00 - 16:20</th>
-          <td>Silvania<br>
-          Henrique</td>
-          <td>
-            Marina<br>
-            Carlos
-          </td>
+            <th scope="row">08:00 - 16:20</th>
+            <td ondragover='onDragOver(event);' ondrop='onDrop(event);'>
+              <div class="parent">
+                <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                  Silvania
+                </span>
+              </div>
+              <br>
+              <div class="parent">
+                <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                  Henrique
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class="parent">
+                <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                  Marina
+                </span>
+              </div>
+              <br>
+              <div class="parent">
+                <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                  Carlos
+                </span>
+              </div>
+            </td> 
         </tr>
+        
         <tr>
           <th scope="row">11:40-20:00</th>
-           <td>Marina cx<br>
-            Carlos</td>
+           <td>
+
+            <div class="parent">
+              <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                Marina cx
+              </span>
+            </div>
+            <br>
+            <div class="parent">
+              <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                Carlos
+              </span>
+            </div>
+            </td>
+          
           <td>
-              Rafaela cs<br>
-              Roberto <br>
-              Henrique*
+             
+              <div class="parent">
+              <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                Rafaela cx
+              </span>
+            </div>
+            <br>
+            <div class="parent">
+              <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                Roberto
+              </span>
+            </div> 
+            
+             <div class="parent">
+              <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                Henrique*
+              </span>
+            </div>
             </td>
         </tr>
+
         <tr>
           <th scope="row">12:40-21:00</th>
-          <td>Yasmin JF<br>
-          Rafael</td>
-        </tr>
-       <tr>
-          <th scope="row">14:10-22:30</th>
-          <td>Brenno<br>
-            Natalia
+
+          <td>
+            <div class="parent">
+              <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                Yasmin JF
+              </span>
+            </div>
+            <br>
+            <div class="parent">
+              <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                Rafael
+              </span>
+            </div>          
           </td>
         </tr>
+
+       <tr>
+          <th scope="row">14:10-22:30</th>
+           <td>
+            <div class="parent">
+              <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                Brenno
+              </span>
+            </div>
+            <br>
+            <div class="parent">
+              <span id="draggableSpan" draggable='true' ondragstart='onDragStart(event);'>
+                Natália
+              </span>
+            </div>          
+          </td>
+      </tr>
+        
         <tr>
           <th scope="row">16:10 - 00:30</th>
-         
         </tr>
+
         <tr>
           <th scope="row">Folgas</th>
           <td>
@@ -61,19 +134,94 @@
             Roberto
           </td>
         </tr>
+
       </tbody>
     </table>
       
     </div>
 
+    
+
     <div class="container">
       
       <button id="displayFuncionariosButton">Exibir funcionarios </button>
       <button>Esconder funcionarios</button>
-
       <button onclick="handlers.displayFuncionarios()">Exibir funcionarios </button>
       <button onclick="">Esconder funcionarios</button>
 
     </div>
+
+    <div>
+      <p></p>
+    </div>
+    <div>
+      <p></p>
+    </div>
+    <div>
+      <p></p>
+    </div>
+
+    <div class="jumbotron">
+      
+      <div class="row">
+        
+        <div class="col-6">
+          
+              <h1>Adicionando Funcionários</h1>
+              
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="#">Nome</span>
+                </div>
+                <input type="text" name="nome" id='addNomeInput' class="form-control" placeholder="Nome completo">
+              </div>
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="#">Sexo</span>
+                </div>
+                <input type="text" name="sexo" id='addSexoInput' class="form-control" placeholder="M/F">
+              </div>
+                
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="#">Cargo</span>
+                </div>
+                <input type="text" name="cargo" id='addCargoInput' class="form-control" placeholder="Gerente/Caixa/Atendente">
+              </div>  
+              
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="#">Cor</span>
+                </div>
+                <input type="text" name="cor" id='addCorInput' class="form-control" placeholder="Branco/Negro">
+              </div>  
+
+              <div><button class="btn btn-secondary" onclick="handlers.addFuncionario()">Adicionar</button></div>
+              
+            </div>
+
+        <div class="col-1">
+          
+        </div>
+
+        <div class="col-4">
+              <h1>Lista de Funcionários</h1>
+              <ul>
+                
+              </ul>
+        </div>
+
+
+        <div class="col-1">
+          
+        </div>
+
+      </div>
+
+    <div>
+      <p></p>
+    </div>
+
 
   {%endblock%}
